@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>酷我音乐</title>
+  <link rel="stylesheet" type="text/css" href="kuwo.css">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_2391535_ml6hutnu9bn.css">
+  <style>
+  *{
+  margin: 0;
+  padding: 0;
+  }
+  a{
+  text-decoration: none;
+  }
+  .tuijian ul li{
+  list-style-type: none;
+  display: inline;
+  }
+  .tuijian ul li a{
+  text-decoration: none;
+  display: block;
+  float:left;
+  padding-right: 56px;
+  padding-top: 17px;
+  text-align: center;
+  color: #414141;
+  font-family: "方正兰亭黑简体";
+  font-weight: 300;
+
+  }
+  .tuijian ul li a.tui1{
+  font-weight: bold;
+  font-family: "Microsoft YaHei UI";
+  font-size: 20px;
+  padding-top: 15px;
+  text-shadow: 3px 3px 3px yellow;
+  color: black;
+  }
+  .tuijian ul li a:hover{
+  color: black;}
+
+
+  .tuijian{
+  margin: 0 328px;
+  background-color: white;
+  width: 734px;
+  height: 54px;
+  padding-top: 20px;
+  }
+  #outer{
+  width: 940px;
+  height:300px;
+  margin: 0px auto;
+  position: relative;
+  overflow: hidden;
+  }
+  #imgList{
+  list-style: none;
+  position: absolute;
+  left: 0px;
+  cursor: pointer;
+
+  }
+  #imgList li{
+  float: left;
+  margin: 0 10px;
+  }
+  #navDiv{
+  position: absolute;
+  bottom: 73.5px;
+  left: 418px;
+  }
+  #navDiv a{
+  float: left;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.5);
+  margin: 0 5px;
+    padding-top: 40%;
+    padding: 0;
+
+  }
+  #prev{
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0,0,0,0.1);
+  color: rgba(255,255,255,0.2);
+  position: absolute;
+  left: 10px;
+  top: 35%;
+  text-align: center;
+  border-radius: 50%;
+  transition: background-color .3s;
+  opacity: 0;
+    padding-top: 0;
+
+  }
+  #next{
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0,0,0,0.1);
+  color: rgba(255,255,255,0.2);
+  position: absolute;
+  right: 10px;
+  top: 35%;
+  text-align: center;
+  border-radius: 50%;
+  transition: background-color .3s;
+  opacity: 0;
+    padding-top: 0;
+  }
+  #prev i,
+  #next i{
+  font-size: 50px;
+  line-height: 60px;
+    width: 10px;
+    height: 10px;
+
+  }
+  #prev:hover ,
+  #next:hover{
+  background-color: rgba(0,0,0,0.3);
+  color: white;
+  }
+  .im1{
+  float:left;
+  position: absolute;
+  bottom: 0;
+  line-height: 0;
+  }
+  .tuijiangedan ul li{
+  list-style-type: none;
+  display: inline;
+  float:left;
+  font-size: 30px;
+  padding-top: 30px;
+  font-weight: bolder;
+
+  }
+  .tuijiangedan  ul li a{
+  text-decoration: none;
+  display: block;
+  float:left;
+  padding-left: 50px;
+  padding-top: 17px;
+  text-align: center;
+  color:#333;
+  font-size: 18px;
+  font-family: "方正兰亭黑简体";
+  font-weight: 300;
+
+  }
+  .tuijiangedan {
+  margin: 0 140px;
+  background-color: white;
+  width: 734px;
+  height: 84px;
+  padding-top: 0px;
+
+  }
+  .tuijiangedan  ul{
+  height: 100px;
+  left: -5px;
+
+  }
+  .tuijiangedan ul li a.tui2{
+  font-family: "Microsoft YaHei UI";
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 13.5px;
+  color: black;
+  text-shadow: 3px 3px 3px yellow;
+  }
+  .tuijiangedan ul li a:hover{
+  color: black;}
+  #gengd{
+  font-size: 17px;
+  font-weight: 1;
+  color: #aaaaaa;
+  padding-top: 18px;
+  }
+  </style>
+</head>
+<body>
+
+<div class="nav-bg">
+  <div class="nav">
+    <div class="logo">
+      <img src="img/logo1.png"/>
+    </div>
+
+    <ul class="fist-nav">
+      <li class="mean-one" id="fx"><span>发现音乐</span></li>
+      <li class="mean-one"><a href="">下载客户端</a></li>
+      <li class="mean-one"><a href="">音乐现场</a></li>
+      <li class="mean-one"><a href="">VIP会员</a></li>
+      <li class="mean-one"><a href="">酷我畅听</a></li>
+      <li class="mean-one"><a href="">酷我耳机</a></li>
+      <li class="mean-one"><a href="">更多</a>
+        <ul class="sec-nav">
+          <li class="mean-two"><a href="#">酷我音乐人</a></li>
+          <li class="mean-two"><a href="#">HiFi音乐</a></li>
+          <li class="mean-two"><a href="#">酷我视频</a></li>
+          <li class="mean-two"><a href="#">主播电台</a></li>
+        </ul>
+      </li>
+    </ul>
+      <!--</ul>-->
+      <div class="search-box">
+        <input class="search-txt" type="text" name="" placeholder="搜索音乐/MV/歌单/歌手">
+        <a class="search-btn"  ><i class="fas fa-search"></i> </a>
+      </div>
+      <ul><li><a href="#">登录/<a href="#">注册</a></a> </li></ul>
+      <!--</ul>-->
+  </div>
+</div>
+<div class="tuijian">
+  <ul>
+    <li><a class="tui1" href="#">推荐</a></li>
+    <li><a href="#">排行榜</a></li>
+    <li><a href="#">歌手</a></li>
+    <li><a href="#">歌单</a></li>
+    <li><a href="#">MV</a></li>
+  </ul>
+</div>
+<div id="outer">
+  <ul id="imgList">
+    <li><img src="img/5.png" width="920px" height="300px" class="show"></li>
+    <li><img src="img/2.png"  width="920px" height="300px"></li>
+    <li><img src="img/3.png" width="920px" height="300px"></li>
+    <li><img src="img/4.png" width="920px" height="300px"></li>
+    <li><img src="img/1.png" width="920px" height="300px"></li>
+  </ul>
+  <div id="navDiv">
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+  </div>
+  <a href="javascript:;" id="prev"><i class="iconfont icon-arrow-left-bold-copy"></i></a>
+  <a href="javascript:;" id="next"><i class="iconfont icon-arrow-right-bold-copy"></i></a>
+</div>
+<div class="tuijiangedan">
+  <ul>
+    <li>推荐歌单</li>
+    <li><a class="tui2" href="#">每日推荐</a></li>
+    <li><a href="javascript:;">翻唱</a></li>
+    <li><a href="javascript:;">网络</a></li>
+    <li><a href="javascript:;">伤感</a></li>
+    <li><a href="javascript:;">欧美</a></li>
+    <li><a href="javascript:;" id="gengd">更多&gt</a></li>
+  </ul>
+
+</div>
+<script>
+  window.onload = function (){
+    imgList.style.width = 940*imgArr.length+"px";
+  }
+  var navDiv = document.getElementById("navDiv");
+  var imgList = document.getElementById("imgList");
+  var imgArr = document.getElementsByTagName("img");
+  var index = 0;
+  let allA = document.querySelectorAll("#navDiv a");
+  var lenA = allA.length;
+  let oOuter = document.querySelector("#outer"),
+          oLeft= document.querySelector("#prev"),
+          oRight = document.querySelector("#next");
+  oOuter.addEventListener("mouseover",function (){
+
+    oLeft.style.opacity = 1;
+    oRight.style.opacity = 1;
+  })
+  setA();
+  oOuter.addEventListener("mouseout",function (){
+
+    oLeft.style.opacity = 0;
+    oRight.style.opacity = 0;
+  })
+  oLeft.onclick = function (){
+    clearInterval(timer);
+    index--;
+    if(index==-1)
+      index=lenA-1;
+    imgList.style.left = -940*index+"px";
+    setA();
+    autoChange();
+  }
+  oRight.onclick = function (){
+    clearInterval(timer);
+    index++;
+    if(index==lenA){
+      index=0;
+    }
+    imgList.style.left= -940*index+"px";
+    setA();
+    autoChange();
+  }
+
+  for(var i = 0;i<lenA; i++){
+    allA[i].number = i;
+    allA[i].onclick = function (){
+      clearInterval(timer);
+      index = this.number;
+      imgList.style.left = -940*index+"px";
+      setA();
+      autoChange();
+    }
+  }
+  autoChange();
+  function  setA(){
+    if(index >= imgArr.length)index=0;
+    for (var i=0;i<lenA;i++){
+      allA[i].style.backgroundColor = "";
+    }
+    allA[index].style.backgroundColor = "white";
+  }
+  var timer;
+  function autoChange(){
+    timer=setInterval(function (){
+      index++;
+      index %= imgArr.length;
+      imgList.style.left = -940*index+"px";
+      setA();
+    },3500)
+  }
+</script>
+</body>
+</html>

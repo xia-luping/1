@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>轮播图</title>
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_2391535_ml6hutnu9bn.css">
+  <link rel="stylesheet" type="text/css" href="3.11.css">
+  <style>
+  </style>
+</head>
+<body>
+<div class="tuijian">
+  <ul>
+    <li><a href="#">推荐</a></li>
+    <li><a href="#">排行榜</a></li>
+    <li><a href="#">歌手</a></li>
+    <li><a href="#">歌单</a></li>
+    <li><a href="#">MV</a></li>
+  </ul>
+</div>
+<div class="banner">
+  <ul class="ber">
+    <li><img src="img/1.png" width="=940px" height="279px" class="show"></li>
+    <li><img src="img/2.png" width="=940px" height="279px" ></li>
+    <li><img src="img/3.png" width="=940px" height="279px" ></li>
+    <li><img src="img/4.png" width="=940px" height="279px" ></li>
+    <li><img src="img/5.png" width="=940px" height="279px" ></li>
+  </ul>
+  <div class="num">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <a href="#" class="prev"><i class="iconfont icon-arrow-left-bold-copy"></i></a>
+  <a href="#" class="next"><i class="iconfont icon-arrow-right-bold-copy"></i></a>
+</div>
+<div class="tuijiangedan">
+  <ul>
+    <li>每日推荐</li>
+    <li><a href="#">翻唱</a></li>
+    <li><a href="#">网络</a></li>
+    <li><a href="#">伤感</a></li>
+    <li><a href="#">欧美</a></li>
+    <li><a href="#">更多&gt</a></li>
+  </ul>
+</div>
+<div class="tupian">
+  <ul>
+    <li><img src="img/7.png" width="=175px" height="175px"></li>
+    <li><img src="img/8.png" width="=175px" height="175px"></li>
+    <li><img src="img/9.png" width="=175px" height="175px"></li>
+    <li><img src="img/10.png" width="=175px" height="175px"></li>
+    <li><img src="img/11.png" width="=175px" height="175px"></li>
+  </ul>
+  <a href="#" class="play"><i class="iconfont icon-play-circle"></i></a>
+</div>
+
+<script>
+  let oLeft = document.querySelector(".banner a.prev"),
+          oRight = document.querySelector(".banner a.next"),
+          aImg = document.querySelectorAll(".baner ul li img ");
+  let len = aImg.length;
+  let index = 0;
+  oRight.onclick = function (){
+    aImg[index].classList.remove("show");
+    index++;
+    console.log(index);
+    aImg[index].classList.add("show");
+  }
+</script>
+</body>
+</html>

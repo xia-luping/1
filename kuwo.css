@@ -1,0 +1,131 @@
+/*初始化HTML样式*/
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /* box-sizing: border-box;*/
+}
+
+a{
+    text-decoration: none;
+    font: bold 16px Microsoft YaHei Light;
+    color: #333333;
+    transition: none;
+    float: left;
+    padding-top: 30px;
+    display: inline-block;
+}
+/*设置导航条的背景及宽高*/
+.nav-bg{
+    width: 100%;
+    height: 67px;
+    border-bottom:solid 1px #f0f0f0;
+    /*background: #000;*/
+}
+.nav-bg .nav{
+    width: 1180px;
+    height: 67px;
+    margin: 0 auto;/*设置水平居中*/
+
+}
+/*对下拉列表中的文本设置*/
+.nav-bg .nav .fist-nav .mean-one{
+    float: left;
+    width: 95px;
+    height: 67px;
+    text-align: center;
+}
+.mean-two{
+    width: 140px;
+
+}
+.nav li:hover .sec-nav {
+    line-height: 26px;
+    text-align: left;
+    /*position:absolute;*/
+}
+
+.nav-bg .nav .fist-nav .mean-one .sec-nav{
+    display: block;
+    width: 100%;/*天哪，就这个地方，没有加上%，就导致了下拉列表的位置完全没有改变！！！！*/
+    position: absolute;/*通过设置定位，将其隐藏起来*/
+    top: 60px;/*原本是-200*/
+    /*line-height: 26px;*/
+
+}
+/*设置鼠标效果，鼠标经过时，二次列表才会出现*/
+/*.nav-bg .nav*/ .fist-nav .mean-one :hover .sec-nav {
+                     display: inline-block;
+                     background-color: #ffe443;
+                     top: 60px;/*原本是60*/
+                 }
+
+#fx{
+    background-color: #FFE443;
+    font-weight: 600;
+    color: #333333;
+    line-height: 67px;
+}
+
+.nav-bg .nav .fist-nav .mean-one a{
+    width:100%;
+    height: 50px;
+    display: inline-block;
+    font-weight: 300;
+}
+
+.sec-nav a:hover{
+    background-color: #FFE443;
+}
+.logo{
+    margin-left:80px ;
+    margin-top: 14px;
+    float: left;
+}
+
+
+.sousuo.css
+.search-box{
+    /*position: relative;*/
+    /*top: 50%;
+    left: 50%;*/
+    transform: translate(-50%,-50%);
+    background-color:#f5f5f5;
+    border-style: solid;
+    border-width: 33px;
+    border-color:#f5f5f5 ;
+    height: 34px;
+    padding: 10px;
+}
+
+.search-box:hover > .search-txt{
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search-box:hover > .search-btn{
+    background: #f5f5f5;
+    top: 67px;
+}
+.search-btn {
+    color:#fb3f51 ;
+    float:left;
+    width: 33px;
+    height: 34px;
+    background:#f5f5f5 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0%;
+    color: #d1c4c4;
+    font-size: 16px;
+    transition: .4s;
+    line-height: 40px;
+    width: 0;}
